@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Calculation Shipping ===
 Contributors: caicedo1089
 Donate link: http://pcaicedo.com/donate-cal-ship
 Tags: Calculation Shipping, Calculator, Carrier, Shipping, Calculadora de Envios, Envios 
