@@ -33,7 +33,7 @@ class CalShip_Admin {
 	}
 	
 	public static function load_menu() {
-		add_options_page( __('Calculation Ship', 'calculationship'), __('Calculation Ship', 'calculationship'), 'manage_options', 'calculationship-key-config', array( 'Calculationship_Admin', 'display_page' ) );
+		add_options_page( __('Calculation Shipping', 'calship'), __('Calculation Shipping', 'calship'), 'manage_options', 'calship-key-config', array( 'CalShip_Admin', 'display_page' ) );
 	}
 	
 	public static function display_page() {

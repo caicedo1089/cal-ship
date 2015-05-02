@@ -7,7 +7,7 @@
  Plugin Name: Calculation Shipping
  Plugin URI: https://github.com/caicedo1089/cal-ship
  Description:  Plugin que realiza el cálculo estandar de los envíos se permite la configuración de sus valores
- Version: 0.1.0
+ Version: 0.2.0
  Author: Pedro Caicedo
  Author URI: http://pcaicedo.com
  License: MIT
