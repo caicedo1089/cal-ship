@@ -1,5 +1,5 @@
 <?php
-class Calculationship_Admin {
+class CalShip_Admin {
 	const TABLE_CALSHIP = 'calship';
 	
 	private static $initiated = false;
@@ -20,9 +20,9 @@ class Calculationship_Admin {
 	private static function init_hooks() {
 		self::$initiated = true;
 		
-		add_action( 'admin_init', array( 'Calculationship_Admin', 'admin_init' ) );
-		add_action( 'admin_menu', array( 'Calculationship_Admin', 'admin_menu' ), 5 );
-		add_action( 'admin_enqueue_scripts', array( 'Calculationship_Admin', 'load_resources' ) );
+		add_action( 'admin_init', array( 'CalShip_Admin', 'admin_init' ) );
+		add_action( 'admin_menu', array( 'CalShip_Admin', 'admin_menu' ), 5 );
+		add_action( 'admin_enqueue_scripts', array( 'CalShip_Admin', 'load_resources' ) );
 	}
 	
 	public static function admin_init() {
@@ -37,18 +37,13 @@ class Calculationship_Admin {
 	}
 	
 	public static function display_page() {
-		/*if ( !Akismet::get_api_key() || ( isset( $_GET['view'] ) && $_GET['view'] == 'start' ) )
-			self::display_start_page();
-		elseif ( isset( $_GET['view'] ) && $_GET['view'] == 'stats' )
-			self::display_stats_page();
-		else*/
 			self::display_configuration_page();
 	}
 	
 	public static function display_configuration_page(){
 		global $wpdb;
 		if ( self::$table_calship == '' )
-			self::$table_calship = $wpdb->prefix . CALCULATIONSHIP_TABLE_NAME;
+			self::$table_calship = $wpdb->prefix . CALSHIP_TABLE_NAME;
 		
 		$table_name = self::$table_calship;
 		
@@ -80,15 +75,15 @@ class Calculationship_Admin {
 		$money_cost_usd = $result->money_cost_usd;
 		$money_unit = $result->money_unit;
 	
-		include(CALCULATIONSHIP_PLUGIN_DIR . 'views/panel.html');
+		include(CALSHIP_PLUGIN_DIR . 'views/panel.html');
 	}
 	
 	public static function load_resources() {
 		wp_register_style( 'jquery-ui.css', '//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css', array( ), '1.11.4' );
-		wp_register_style( 'admin_calship.css', CALCULATIONSHIP_PLUGIN_URL . 'css/admin_calship.css', array( 'jquery-ui.css' ), CALCULATIONSHIP_VERSION );
+		wp_register_style( 'admin_calship.css', CALSHIP_PLUGIN_URL . 'css/admin_calship.css', array( 'jquery-ui.css' ), CALSHIP_VERSION );
 		wp_enqueue_style( 'admin_calship.css');
 		
-		wp_register_script( 'admin_calship.js', CALCULATIONSHIP_PLUGIN_URL . 'js/admin_calship.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-slider', 'jquery-ui-spinner', 'jquery-ui-selectmenu' ), CALCULATIONSHIP_VERSION );
+		wp_register_script( 'admin_calship.js', CALSHIP_PLUGIN_URL . 'js/admin_calship.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-slider', 'jquery-ui-spinner', 'jquery-ui-selectmenu' ), CALSHIP_VERSION );
 		wp_enqueue_script( 'admin_calship.js' );
 		
 	}
