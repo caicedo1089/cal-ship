@@ -1,0 +1,36 @@
+
+<div id="dialog-price" title="Costo del Env&iacute;o Aproximado">
+	<p></p>
+	<p>
+	  <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+	  El costo de su env&iacute;o es:
+	  </br></br>
+	  <b id="priceship" style="font-size:17px;">0 Bs</b>.
+	</p>
+</div>
+
+<div id="calculadora" class="box clearfix">
+	<h3 style="text-align: center;">C&aacute;lculadora de Flete en L&iacute;nea</h3>
+	
+	<p class="cell cellright" style="line-height: 30px !important;"><label for="type_shipping" >Tipo de Env&iacute;o</label></p> 
+	<p class="cell">
+		<select id="type_shipping" name="type_shipping">
+		    <option value="1" >Aereo</option>
+		    <option value="2" >Mar&iacute;timo</option>
+	  	</select>
+	</p>
+	
+	<p class="cell cellright"><label for="alto" ">Alto (Pulgadas)</label></p>
+	<p class="cell"><input type='text' id='alto'  name='alto' value='0' /></p>
+	
+	<p class="cell cellright"><label for="ancho">Ancho (Pulgadas)</label></p> 
+	<p class="cell"><input type='text' id='ancho'  name='ancho' value='0' /></p>
+	
+	<p class="cell cellright"><label for="largo" >Largo (Pulgadas)</label></p> 
+	<p class="cell"><input type='text' id='largo'  name='largo' value='0' /></p>
+	
+	<p class="cell cellright"><label for="peso">Peso (Libras)</label></p> 
+	<p class="cell"><input type='text' id='peso'  name='peso' value='0' /></p>
+	
+	<p style="text-align: center;"><input type='submit' id='calcular' name='calcular' value='Calcular' />
+</div>

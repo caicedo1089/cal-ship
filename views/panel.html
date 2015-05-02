@@ -1,0 +1,31 @@
+<div id="calculadora" class="wrap">
+	<h1 style="text-align: center;">C&aacute;lculo de Precio de los env&iacute;os</h1>
+	<form method="post" action="">
+		<fieldset>
+			<p style="width: 50%; float: left; text-align: right;"><label for="aereo_min_lb" accesskey="s" style="padding-right: 10px;">M&iacute;nima Cant. Libras (A&eacute;reo)</label></p>
+			<p style="width: 50%; float: left;"><input type='text' id='aereo_min_lb'  name='aereo_min_lb'  value='<?= $aereo_min_lb ?>' /></p>
+			
+			<p style="width: 50%; float: left; text-align: right;"><label for="aereo_cost_lb" accesskey="w" style="padding-right: 10px;">Costo por Libra (A&eacute;reo)</label></p> 
+			<p style="width: 50%; float: left;"><input type='text' id='aereo_cost_lb'  name='aereo_cost_lb' value='<?= $aereo_cost_lb ?>' /></p>
+			
+			<p style="width: 50%; float: left; text-align: right;"><label for="maritimo_min_pie" accesskey="e" style="padding-right: 10px;">M&iacute;nima Cant. Pie3 (Mar&iacute;timo)</label></p> 
+			<p style="width: 50%; float: left;"><input type='text' id='maritimo_min_pie'  name='maritimo_min_pie' value='<?= $maritimo_min_pie ?>' /></p>
+			
+			<p style="width: 50%; float: left; text-align: right;"><label for="maritimo_cost_pie" accesskey="r" style="padding-right: 10px;">Costo por Pie3 (Mar&iacute;timo)</label></p> 
+			<p style="width: 50%; float: left;"><input type='text' id='maritimo_cost_pie'  name='maritimo_cost_pie' value='<?= $maritimo_cost_pie ?>' /></p>
+			
+			<p style="width: 50%; float: left; text-align: right;"><label for="money_cost_usd" accesskey="r" style="padding-right: 10px;">Costo del Dolar</label></p> 
+			<p style="width: 50%; float: left;"><input type='text' id='money_cost_usd'  name='money_cost_usd' value='<?= $money_cost_usd ?>' /></p>
+			
+			<p style="width: 50%; float: left; text-align: right;"><label for="money_unit" accesskey="t" style="padding-right: 10px;">Unidad Monetar&iacute;a</label></p> 
+			<p style="width: 50%; float: left;">
+				<select id="money_unit" name="money_unit">
+				    <option value="USD" <?php if($money_unit=="USD") echo "selected";?> >USD</option>
+				    <option value="Bs" <?php if($money_unit=="Bs") echo "selected";?> >Bs</option>
+			  	</select>
+			</p>
+			
+			<p style="text-align: center;"><input type='submit' name='' value='Actualizar' />
+		</fieldset>
+	</form>	
+</div>

@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+  .cell{
+  	width: 50%; 
+  	float: left;
+  }
+  .cellright{
+  	text-align: right;
+  	line-height: 40px;
+	font-size: 16px;
+  }
+  
+  .cellright label{padding-right: 10px;}
+   #calculadora select{width: 223px;}
+   ul li{background-image: none !important;}
